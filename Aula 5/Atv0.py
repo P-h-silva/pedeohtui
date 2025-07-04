@@ -1,24 +1,16 @@
-def contar_numeros():
-  """
-  Pede ao usuário dois números e realiza a contagem entre eles, 
-  crescente ou decrescente, dependendo da ordem.
-  """
-  try:
-    primeiro_numero = int(input("Digite o primeiro número: "))
-    ultimo_numero = int(input("Digite o último número: "))
+#Peça para  o usuário entrar com dois valores (primeiro e último).
+#Faça a contagem entre esses números.
+#Caso o último for menor que  o primeiro faça a contagem decrescente.
+#Caso o último número for maior que o primeiro faça a contagem crescente.
 
-    if ultimo_numero > primeiro_numero:
-      print(f"Contagem crescente de {primeiro_numero} até {ultimo_numero}:")
-      for i in range(primeiro_numero, ultimo_numero + 1):
-        print(i)
-    elif ultimo_numero < primeiro_numero:
-      print(f"Contagem decrescente de {primeiro_numero} até {ultimo_numero}:")
-      for i in range(primeiro_numero, ultimo_numero - 1, -1):
-        print(i)
-    else:
-      print("Os números são iguais, nenhuma contagem necessária.")
+# Solicita ao usuário os valores
+primeiro = int(input("Digite o primeiro valor: "))
+ultimo = int(input("Digite o último valor: "))
 
-  except ValueError:
-    print("Por favor, insira apenas números inteiros.")
-
-contar_numeros()
+# Verifica e faz a contagem
+if primeiro < ultimo:
+    for i in range(primeiro, ultimo + 1):
+        print(i, end=' ')
+else:
+    for i in range(primeiro, ultimo - 1, -1):
+        print(i, end=' ')

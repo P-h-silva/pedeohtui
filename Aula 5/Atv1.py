@@ -1,14 +1,11 @@
-a = int (input("Conte até..."))
-i = 0
-if (a>0):
-    while i<= a:
-        print(i)
-        i += 1
+# Solicita ao usuário um valor entre 1 e 10
+valor = int(input("Digite um valor entre 1 e 10: "))
+# Verifica se o valor está no intervalo válido
+if 1 <= valor <= 10:
+    # Imprime a tabuada de 1 a 10 para o valor informado
+    print(f"\nTabuada de {valor}:\n")
+    for i in range(1, 11):
+        resultado = valor * i
+        print(valor, "x" ,i, "=", resultado)
 else:
-    print ("Entre com um número positivo!")
-
-numero = int (input("Digite um numero"))
-contador = 1
-while contador <=10:
-    print (numero, "x", contador, "=", numero*contador)
-    contador += 1
+    print("Por favor, digite um valor entre 1 e 10.")
