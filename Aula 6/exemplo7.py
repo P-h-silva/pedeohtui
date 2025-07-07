@@ -1,0 +1,13 @@
+numeros = [10,8,9,11,1,21]
+soma = sum(numeros)
+minimo = min(numeros)
+maximo = max(numeros)
+ordenado = sorted(numeros)
+numeros.sort()
+print ("soma =", soma)
+print ("Menor =", minimo)
+print ("Maior = ", maximo)
+print ("Ordenado = ", ordenado)
+print ("Ordenado =", numeros)
+numeros.sort(reverse=True)
+print ("Ordenado = ", numeros)
